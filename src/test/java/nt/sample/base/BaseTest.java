@@ -2,19 +2,15 @@ package nt.sample.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.*;
 import lib.Util;
-import org.testng.annotations.BeforeTest;
 import pageObjects.HomePage;
 
 public class BaseTest {
     private WebDriver driver;
     protected HomePage homePage;
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp(){
         switch(Util.getOS()){
             case WINDOWS:
@@ -31,8 +27,8 @@ public class BaseTest {
         homePage = new HomePage(driver);
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown(){
-        driver.close();
+        driver.quit();
     }
 }
