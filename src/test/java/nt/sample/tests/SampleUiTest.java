@@ -1,6 +1,6 @@
 package nt.sample.tests;
 
-import nt.sample.resources.BaseTest;
+import nt.sample.base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
