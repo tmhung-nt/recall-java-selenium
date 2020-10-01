@@ -4,6 +4,11 @@
 version: 2
 jobs:
   build:
+    filters:
+        branches:
+          only:
+            - master
+            - /feature/*
     docker:
       - image: circleci/openjdk:11-jdk-stretch-browsers
 
