@@ -10,7 +10,7 @@ jobs:
             - master
             - /feature/*
     docker:
-      - image: circleci/openjdk:11-jdk-stretch-browsers
+      - image: circleci/openjdk:14.0.2-jdk-buster-node-browsers-legacy
 
     environment:
       # Customize the JVM maximum heap limit
