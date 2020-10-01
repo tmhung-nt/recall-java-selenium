@@ -1,4 +1,5 @@
 # Java Selenium Maven
+[![CircleCI](https://circleci.com/gh/CircleCI-Public/recall-java-selenium.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
 
 To recall stuff :)
 Thanks to:
