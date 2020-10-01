@@ -6,7 +6,7 @@ jdk:
 addons:
   firefox: "60.0"
 before_install:
-- sudo apt-get update -y && sudo apt-get upgrade -y
+- sudo apt-get update -y && sudo apt-get upgrade -y --allow-unauthenticated
 - sudo apt-get install -y dpkg dbus-x11
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
