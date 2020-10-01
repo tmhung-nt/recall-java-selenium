@@ -4,3 +4,6 @@ services:
 
 addons:
   chrome: stable
+
+language:
+  java
