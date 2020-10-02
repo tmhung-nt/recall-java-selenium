@@ -50,8 +50,8 @@ jobs:
       - type: test-results-store
         path: ./target/surefire-reports/
       - store_test_results:
-          path: ~/testng/results/
-      - store_artifacts:
-          path: ~/testng/results/
-      - store_artifacts:
-          path:  testng/results/
+          path: ./target/surefire-reports/
+#      - store_artifacts:
+#          path: ~/testng/results/
+#      - store_artifacts:
+#          path:  testng/results/
