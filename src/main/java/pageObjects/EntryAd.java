@@ -16,6 +16,7 @@ public class EntryAd {
     }
 
     public void openModal(){
+        driver.findElement(By.cssSelector(".modal-body p"));
         driver.findElement(openModalLink);
     }
 

@@ -56,6 +56,12 @@ public class HomePage {
         return new EntryAd(this.driver);
     }
 
+    public NestedFrame clickNestedFrame(){
+        clickLink("Frames");
+        clickLink("Nested Frames");
+        return new NestedFrame(this.driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
