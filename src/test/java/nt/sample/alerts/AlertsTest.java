@@ -2,7 +2,6 @@ package nt.sample.alerts;
 
 import nt.sample.base.BaseTest;
 import org.testng.annotations.Test;
-import pageObjects.JavascritptAlerts;
 
 import static org.testng.Assert.assertEquals;
 

@@ -3,14 +3,14 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class JavascritptAlerts {
+public class JavascritptAlertsPage {
     private WebDriver driver;
     private By triggerAlertButton = By.cssSelector("button[onclick='jsAlert()']");
     private By triggerConfirmButton = By.cssSelector("button[onclick='jsConfirm()']");
     private By triggerPromptButton = By.cssSelector("button[onclick='jsPrompt()']");
     private By result = By.id("result");
 
-    public JavascritptAlerts(WebDriver driver) {
+    public JavascritptAlertsPage(WebDriver driver) {
         this.driver = driver;
     }
 

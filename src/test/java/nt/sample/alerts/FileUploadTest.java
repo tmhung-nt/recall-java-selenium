@@ -1,6 +1,6 @@
 package nt.sample.alerts;
 
-import lib.Util;
+import utils.CommonUtils;
 import nt.sample.base.BaseTest;
 import org.testng.annotations.Test;
 
@@ -11,7 +11,7 @@ public class FileUploadTest extends BaseTest {
     public void testUploadFile(){
         var fileUploadPage = homePage.clickFileUpload();
         String filename = "README.md";
-        String fileToUploadPath = Util.getProjectAbsolutePath() + "/" + filename;
+        String fileToUploadPath = CommonUtils.getProjectAbsolutePath() + "/" + filename;
         fileUploadPage.setInputField(fileToUploadPath);
         fileUploadPage.uploadFile();
         assertEquals(fileUploadPage.getUploadResult(), filename, "Uploaded filename is incorrect!");

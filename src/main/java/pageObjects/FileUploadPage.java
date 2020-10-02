@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class FileUpload {
+public class FileUploadPage {
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -13,7 +13,7 @@ public class FileUpload {
     private By uploadButton = By.id("file-submit");
     private By uploadResult = By.id("uploaded-files");
 
-    public FileUpload(WebDriver driver){
+    public FileUploadPage(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver, 5);
     }

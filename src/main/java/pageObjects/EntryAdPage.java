@@ -5,13 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class EntryAd {
+public class EntryAdPage {
     private WebDriver driver;
     private By openModalLink = By.linkText("click here");
     private By modalTitle = By.className("modal-title");
     private By modalCloseButton = By.xpath("//p[text() = 'Close']");
 
-    public EntryAd(WebDriver driver) {
+    public EntryAdPage(WebDriver driver) {
         this.driver = driver;
     }
 
