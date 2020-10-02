@@ -1,4 +1,4 @@
-  #
+#
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
@@ -47,8 +47,6 @@ jobs:
 #          when: always
 
       # Upload test results
-      - type: test-results-store
-        path: ./target/surefire-reports/
       - store_test_results:
           path: ./target/surefire-reports/
 #      - store_artifacts:
