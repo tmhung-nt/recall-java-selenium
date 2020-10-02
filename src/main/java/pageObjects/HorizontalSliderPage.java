@@ -6,11 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class HorizontalSlider {
+public class HorizontalSliderPage {
     private WebDriver driver;
     private By sliderLocator = By.tagName("input");
     private By sliderValue = By.id("range");
-    public HorizontalSlider(WebDriver driver) {
+    public HorizontalSliderPage(WebDriver driver) {
         this.driver = driver;
     }
 

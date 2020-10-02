@@ -1,6 +1,6 @@
 package nt.sample.keyPresses;
 
-import lib.Util;
+import utils.CommonUtils;
 import nt.sample.base.BaseTest;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
@@ -18,7 +18,7 @@ public class KeyPressesTest extends BaseTest {
     @Test
     public void testPressPi(){
         var keyPressesPage = homePage.clickKeyPresses();
-        switch (Util.getOS()){
+        switch (CommonUtils.getOS()){
             case LINUX:
                 keyPressesPage.enterText(Keys.chord(Keys.ALT, "P") + "=3.14");
                 break;

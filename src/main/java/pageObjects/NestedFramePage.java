@@ -3,7 +3,7 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class NestedFrame {
+public class NestedFramePage {
     private WebDriver driver;
     private String frameTop = "frame-top";
     private String frameBottom = "frame-bottom";
@@ -11,7 +11,7 @@ public class NestedFrame {
     private By frameSet = By.tagName("frameset");
     private By frameBody = By.tagName("body");
 
-    public NestedFrame(WebDriver driver) {
+    public NestedFramePage(WebDriver driver) {
         this.driver=driver;
     }
 

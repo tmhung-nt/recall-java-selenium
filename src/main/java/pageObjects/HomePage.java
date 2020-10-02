@@ -31,35 +31,55 @@ public class HomePage {
         return new HoversPage(this.driver);
     }
 
-    public KeyPresses clickKeyPresses(){
+    public KeyPressesPage clickKeyPresses(){
         clickLink("Key Presses");
-        return new KeyPresses(this.driver);
+        return new KeyPressesPage(this.driver);
     }
 
-    public HorizontalSlider clickHorizontalSlider(){
+    public HorizontalSliderPage clickHorizontalSlider(){
         clickLink("Horizontal Slider");
-        return new HorizontalSlider(this.driver);
+        return new HorizontalSliderPage(this.driver);
     }
 
-    public JavascritptAlerts clickJavascritptAlerts(){
+    public JavascritptAlertsPage clickJavascritptAlerts(){
         clickLink("JavaScript Alerts");
-        return new JavascritptAlerts(this.driver);
+        return new JavascritptAlertsPage(this.driver);
     }
 
-    public FileUpload clickFileUpload(){
+    public FileUploadPage clickFileUpload(){
         clickLink("File Upload");
-        return new FileUpload(this.driver);
+        return new FileUploadPage(this.driver);
     }
 
-    public EntryAd clickEntryAd(){
+    public EntryAdPage clickEntryAd(){
         clickLink("Entry Ad");
-        return new EntryAd(this.driver);
+        return new EntryAdPage(this.driver);
     }
 
-    public NestedFrame clickNestedFrame(){
+    public DynamicLoadingPage clickDynamicLoading(){
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(this.driver);
+    }
+
+    public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(this.driver);
+    }
+
+    public MultipleWindowsPage clickMultipleWindows(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(this.driver);
+    }
+
+    public LargeAndDeepDomPage clickLargeAndDeepDom(){
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(this.driver);
+    }
+
+    public NestedFramePage clickNestedFrame(){
         clickLink("Frames");
         clickLink("Nested Frames");
-        return new NestedFrame(this.driver);
+        return new NestedFramePage(this.driver);
     }
 
     private void clickLink(String linkText){

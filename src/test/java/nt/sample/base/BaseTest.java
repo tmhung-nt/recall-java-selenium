@@ -3,8 +3,9 @@ package nt.sample.base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-import lib.Util;
+import utils.CommonUtils;
 import pageObjects.HomePage;
+import utils.WindowManager;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,7 +15,7 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp(){
-        switch(Util.getOS()){
+        switch(CommonUtils.getOS()){
             case WINDOWS:
                 break;
             case LINUX:
@@ -37,5 +38,9 @@ public class BaseTest {
     @AfterClass
     public void tearDown(){
         driver.quit();
+    }
+
+    public WindowManager getWindowManager(){
+        return new WindowManager(driver);
     }
 }

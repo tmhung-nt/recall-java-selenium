@@ -3,12 +3,12 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class KeyPresses {
+public class KeyPressesPage {
     private WebDriver driver;
     private By inputField = By.id("target");
     private By resultText = By.id("result");
 
-    public KeyPresses(WebDriver driver) {
+    public KeyPressesPage(WebDriver driver) {
         this.driver = driver;
     }
 

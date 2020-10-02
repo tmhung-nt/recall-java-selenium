@@ -1,6 +1,6 @@
-package lib;
+package utils;
 
-public class Util {
+public class CommonUtils {
     public enum OS {
         WINDOWS, LINUX, MAC, SOLARIS
     }
