@@ -10,7 +10,7 @@ public class BaseTest {
     private WebDriver driver;
     protected HomePage homePage;
 
-    @BeforeMethod
+    @BeforeClass
     public void setUp(){
         switch(Util.getOS()){
             case WINDOWS:
@@ -23,11 +23,17 @@ public class BaseTest {
         }
 
         driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/");
+        driver.manage().window().maximize();
+        goHome();
         homePage = new HomePage(driver);
     }
 
-    @AfterMethod
+    @BeforeMethod
+    public void goHome(){
+        driver.get("https://the-internet.herokuapp.com/");
+    }
+
+    @AfterClass
     public void tearDown(){
         driver.quit();
     }

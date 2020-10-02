@@ -10,10 +10,15 @@ public class HorizontalSliderTest extends BaseTest {
     public void testSliderByPressingArrowRight(){
         var horizontalSlider = homePage.clickHorizontalSlider();
         horizontalSlider.clickSlider();
+        int count = 0;
         while(horizontalSlider.getSliderValue() != "4"){
             horizontalSlider.increaseSliderValueByArrowRightKey();
             if (horizontalSlider.getSliderValue().equalsIgnoreCase("4")){
                 assertEquals(horizontalSlider.getSliderValue(), "4");
+                break;
+            }
+            count=+1;
+            if (count > 5){
                 break;
             }
         }
