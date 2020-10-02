@@ -41,6 +41,27 @@ public class HomePage {
         return new HorizontalSlider(this.driver);
     }
 
+    public JavascritptAlerts clickJavascritptAlerts(){
+        clickLink("JavaScript Alerts");
+        return new JavascritptAlerts(this.driver);
+    }
+
+    public FileUpload clickFileUpload(){
+        clickLink("File Upload");
+        return new FileUpload(this.driver);
+    }
+
+    public EntryAd clickEntryAd(){
+        clickLink("Entry Ad");
+        return new EntryAd(this.driver);
+    }
+
+    public NestedFrame clickNestedFrame(){
+        clickLink("Frames");
+        clickLink("Nested Frames");
+        return new NestedFrame(this.driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }

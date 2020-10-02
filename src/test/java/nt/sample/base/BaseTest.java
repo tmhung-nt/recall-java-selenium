@@ -6,28 +6,35 @@ import org.testng.annotations.*;
 import lib.Util;
 import pageObjects.HomePage;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseTest {
     private WebDriver driver;
     protected HomePage homePage;
 
-    @BeforeMethod
+    @BeforeClass
     public void setUp(){
         switch(Util.getOS()){
             case WINDOWS:
                 break;
             case LINUX:
-                System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-                break;
             default:
                 System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         }
 
         driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        goHome();
         homePage = new HomePage(driver);
     }
 
-    @AfterMethod
+    @BeforeMethod
+    public void goHome(){
+        driver.get("https://the-internet.herokuapp.com/");
+    }
+
+    @AfterClass
     public void tearDown(){
         driver.quit();
     }
