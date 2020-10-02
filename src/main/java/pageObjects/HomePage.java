@@ -51,6 +51,11 @@ public class HomePage {
         return new FileUpload(this.driver);
     }
 
+    public EntryAd clickEntryAd(){
+        clickLink("Entry Ad");
+        return new EntryAd(this.driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
