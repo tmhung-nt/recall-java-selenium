@@ -48,7 +48,7 @@ jobs:
 
       # Upload test results
       - store_test_results:
-          path: /target/surefire-reports/testng-results.xml
+          path: ./target/surefire-reports
 #      - store_artifacts:
 #          path: ~/testng/results/
 #      - store_artifacts:
